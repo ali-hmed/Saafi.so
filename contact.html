@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Saafi - Get in Touch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-hero {
+            padding: 160px 0 80px;
+            background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%);
+            text-align: center;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 80px;
+            padding: 100px 0;
+            align-items: start;
+        }
+
+        .contact-info-side h2 {
+            font-size: 48px;
+            margin-bottom: 24px;
+            color: var(--headline);
+        }
+
+        .contact-info-side p {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .contact-methods {
+            display: grid;
+            gap: 32px;
+        }
+
+        .method-card {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .method-icon {
+            width: 48px;
+            height: 48px;
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        }
+
+        .method-details h3 {
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .method-details p {
+            font-size: 15px;
+            margin: 0;
+            color: var(--text-muted);
+        }
+
+        .contact-form-card {
+            background: white;
+            padding: 48px;
+            border-radius: 32px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .contact-form-card::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            background: linear-gradient(45deg, var(--primary), #818cf8);
+            z-index: -1;
+            border-radius: 33px;
+            opacity: 0.1;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            background: #f8fafc;
+            font-family: inherit;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: white;
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .office-locations {
+            background: white;
+            padding: 100px 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .location-card {
+            padding: 32px;
+            border-radius: 24px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .location-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .location-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .location-card p {
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+
+        @media (max-width: 900px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .contact-info-side h2 {
+                font-size: 36px;
+            }
+
+            .location-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-scrolled">
+        <div class="container">
+            <a href="index.html" class="logo">Saa<span>fi</span></a>
+            <div class="nav-links">
+                <a href="onboarding.html">Platform</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="academy.html">Academy</a>
+            </div>
+            <div class="nav-actions">
+                <a href="index.html" class="btn btn-secondary">Back to Site</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container contact-container">
+            <div class="contact-info-side">
+                <span class="badge">Get In Touch</span>
+                <h2>Let's Build the <strong>Future of VA</strong> Business Together</h2>
+                <p>Have questions about Saafi? Our team of success managers is here to help you automate your business
+                    and scale to new heights.</p>
+
+                <div class="contact-methods">
+                    <div class="method-card">
+                        <div class="method-icon"><i data-lucide="mail"></i></div>
+                        <div class="method-details">
+                            <h3>Email Us</h3>
+                            <p>hello@saafi.so</p>
+                            <p>support@saafi.so</p>
+                        </div>
+                    </div>
+                    <div class="method-card">
+                        <div class="method-icon"><i data-lucide="message-circle"></i></div>
+                        <div class="method-details">
+                            <h3>Live Chat</h3>
+                            <p>Available Mon-Fri, 9am - 6pm EST</p>
+                            <p>Average response time: 5 minutes</p>
+                        </div>
+                    </div>
+                    <div class="method-card">
+                        <div class="method-icon"><i data-lucide="phone"></i></div>
+                        <div class="method-details">
+                            <h3>Sales Inquiry</h3>
+                            <p>+1 (555) 000-0000</p>
+                            <p>For agency & enterprise plans</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-card">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Jane Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="jane@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" class="form-control">
+                            <option value="general">General Inquiry</option>
+                            <option value="sales">Sales & Pricing</option>
+                            <option value="support">Technical Support</option>
+                            <option value="partnership">Partnership</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="form-control" placeholder="How can we help you?"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
+                    <p id="form-status"
+                        style="margin-top: 16px; text-align: center; font-size: 14px; font-weight: 500;"></p>
+                </form>
+            </div>
+        </div>
+
+        <section class="office-locations">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Global Presence</h2>
+                    <p>Our remote-first team is distributed across the world, with core hubs in three continents.</p>
+                </div>
+                <div class="location-grid">
+                    <div class="location-card">
+                        <h3>New York</h3>
+                        <p>250 Hudson Street, Suite 200</p>
+                        <p>New York, NY 10013</p>
+                    </div>
+                    <div class="location-card">
+                        <h3>London</h3>
+                        <p>123 Old Street, Whitechapel</p>
+                        <p>London, EC1V 9BH</p>
+                    </div>
+                    <div class="location-card">
+                        <h3>Singapore</h3>
+                        <p>71 Ayer Rajah Crescent, #02-18</p>
+                        <p>Singapore 139951</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo">Saa<span>fi</span></div>
+                    <p>Building the infrastructure for the modern assistant economy.</p>
+                    <div class="social-links">
+                        <a href="https://twitter.com" target="_blank"><i data-lucide="twitter"></i></a>
+                        <a href="https://linkedin.com" target="_blank"><i data-lucide="linkedin"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i data-lucide="instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Platform</h4>
+                        <a href="onboarding.html">Onboarding</a>
+                        <a href="billing.html">Billing</a>
+                        <a href="portals.html">Client Portals</a>
+                        <a href="security.html">Security</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Resources</h4>
+                        <a href="pricing.html">Pricing</a>
+                        <a href="academy.html">VA Academy</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="community.html">Community</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Support</h4>
+                        <a href="help.html">Help Center</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="status.html">Status</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Saafi Technologies Inc. | <a href="terms.html">Terms</a> | <a
+                    href="privacy.html">Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            const status = document.getElementById('form-status');
+
+            btn.innerText = 'Sending...';
+            btn.disabled = true;
+
+            // Simulate API call
+            setTimeout(() => {
+                btn.innerText = 'Message Sent! ✨';
+                btn.style.background = '#10b981';
+                status.innerText = "Thanks for reaching out! We'll get back to you within 2 hours.";
+                status.style.color = '#10b981';
+                this.reset();
+
+                setTimeout(() => {
+                    btn.innerText = 'Send Message';
+                    btn.disabled = false;
+                    btn.style.background = '';
+                    status.innerText = "";
+                }, 5000);
+            }, 1500);
+        });
+    </script>
+</body>
+
+</html>
