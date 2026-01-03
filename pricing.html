@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans | Saafi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Outfit:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-scrolled">
+        <div class="container">
+            <a href="index.html" class="logo">Saa<span>fi</span></a>
+            <div class="nav-actions">
+                <a href="index.html" class="btn btn-secondary">Back to Site</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero" style="padding: 140px 0 60px; text-align: center;">
+        <div class="container">
+            <h1 class="headline">Simple, <strong>Predictable</strong> Pricing</h1>
+            <p class="subheadline">Pick a plan that fits your current business size. Scale as you grow.</p>
+        </div>
+    </header>
+
+    <section class="pricing" style="padding: 40px 0 120px;">
+        <div class="container">
+            <div class="pricing-toggle"
+                style="margin-bottom: 60px; display: flex; justify-content: center; align-items: center; gap: 20px;">
+                <span>Monthly</span>
+                <label class="switch">
+                    <input type="checkbox" id="billing-toggle">
+                    <span class="slider round"></span>
+                </label>
+                <span>Yearly <small class="save-tag">(Save 20%)</small></span>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h3>Starter</h3>
+                        <div class="price"><span class="currency">$</span><span class="amount" data-monthly="29"
+                                data-yearly="24">29</span><span class="period">/mo</span></div>
+                    </div>
+                    <ul class="price-features">
+                        <li><i data-lucide="check"></i> Up to 3 Clients</li>
+                        <li><i data-lucide="check"></i> Automated Billing</li>
+                        <li><i data-lucide="check"></i> Basic Client Portal</li>
+                        <li><i data-lucide="minus"></i> Advanced Analytics</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary full-width">Start Free Trial</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="card-header">
+                        <h3>Pro</h3>
+                        <div class="price"><span class="currency">$</span><span class="amount" data-monthly="79"
+                                data-yearly="64">79</span><span class="period">/mo</span></div>
+                    </div>
+                    <ul class="price-features">
+                        <li><i data-lucide="check"></i> Unlimited Clients</li>
+                        <li><i data-lucide="check"></i> Custom Branding</li>
+                        <li><i data-lucide="check"></i> Team Members (Up to 3)</li>
+                        <li><i data-lucide="check"></i> Workflow Automation</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary full-width">Get Started with Pro</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h3>Agency</h3>
+                        <div class="price"><span class="currency">$</span><span class="amount" data-monthly="149"
+                                data-yearly="119">149</span><span class="period">/mo</span></div>
+                    </div>
+                    <ul class="price-features">
+                        <li><i data-lucide="check"></i> Premium Support</li>
+                        <li><i data-lucide="check"></i> API Access</li>
+                        <li><i data-lucide="check"></i> Custom Domain</li>
+                        <li><i data-lucide="check"></i> Unlimited Seats</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary full-width">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shared Footer Logic -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                &copy; 2026 Saafi Technologies Inc. | <a href="terms.html">Terms</a> | <a
+                    href="privacy.html">Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

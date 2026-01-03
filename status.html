@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Status | Saafi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .status-hero {
+            padding: 160px 0 60px;
+            text-align: center;
+        }
+
+        .status-header {
+            background: #ecfdf5;
+            border: 1px solid #10b981;
+            padding: 24px;
+            border-radius: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            background: #10b981;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .status-dot::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #10b981;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(3);
+                opacity: 0;
+            }
+        }
+
+        .status-header h2 {
+            color: #065f46;
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .status-grid {
+            margin-bottom: 60px;
+        }
+
+        .status-card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .status-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-info h3 {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .service-info p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .status-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            color: #10b981;
+        }
+
+        /* Regional Performance */
+        .metrics-section {
+            margin-bottom: 80px;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+        }
+
+        .metric-card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px;
+        }
+
+        .metric-card h4 {
+            font-size: 16px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .metric-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .latency-bar {
+            height: 8px;
+            background: #f1f5f9;
+            border-radius: 4px;
+            margin-top: 12px;
+            overflow: hidden;
+        }
+
+        .latency-fill {
+            height: 100%;
+            background: var(--primary);
+            border-radius: 4px;
+        }
+
+        /* Maintenance & History */
+        .uptime-history,
+        .maintenance-section {
+            margin-top: 60px;
+        }
+
+        .history-card,
+        .maintenance-card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px;
+        }
+
+        .history-day,
+        .maintenance-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .history-day:last-child,
+        .maintenance-item:last-child {
+            border-bottom: none;
+        }
+
+        .history-day span:first-child {
+            font-weight: 600;
+        }
+
+        .report-box {
+            background: #f8fafc;
+            border: 1px dashed var(--border-color);
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .back-home {
+            margin-top: 40px;
+            display: inline-block;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .status-card {
+                flex-direction: column;
+                text-align: center;
+                gap: 16px;
+            }
+
+            .history-day,
+            .maintenance-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-scrolled">
+        <div class="container">
+            <a href="index.html" class="logo">Saa<span>fi</span></a>
+            <div class="nav-actions">
+                <a href="index.html" class="btn btn-secondary">Back to Site</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="status-hero">
+            <div class="status-header">
+                <div class="status-dot"></div>
+                <h2>All Systems Operational</h2>
+            </div>
+            <p class="subheadline">99.98% uptime recorded over the last 90 days across all global infrastructure.</p>
+        </section>
+
+        <!-- Current Status Grid -->
+        <section class="status-grid">
+            <div class="status-card">
+                <div class="service-info">
+                    <h3>Web Application</h3>
+                    <p>Dashboard, Client Portals, and Core CMS</p>
+                </div>
+                <div class="status-label">
+                    <i data-lucide="check-circle"></i> Operational
+                </div>
+            </div>
+            <div class="status-card">
+                <div class="service-info">
+                    <h3>API Cluster</h3>
+                    <p>REST API endpoints and Webhook delivery</p>
+                </div>
+                <div class="status-label">
+                    <i data-lucide="check-circle"></i> Operational
+                </div>
+            </div>
+            <div class="status-card">
+                <div class="service-info">
+                    <h3>Database Engine</h3>
+                    <p>Primary clusters and read-replicas</p>
+                </div>
+                <div class="status-label">
+                    <i data-lucide="check-circle"></i> Operational
+                </div>
+            </div>
+            <div class="status-card">
+                <div class="service-info">
+                    <h3>Payment Systems</h3>
+                    <p>Stripe Connect and Invoice generation</p>
+                </div>
+                <div class="status-label">
+                    <i data-lucide="check-circle"></i> Operational
+                </div>
+            </div>
+        </section>
+
+        <!-- Latency Metrics -->
+        <section class="metrics-section">
+            <div class="section-header">
+                <h2>Regional Performance</h2>
+                <p>Real-time latency from our global edge network.</p>
+            </div>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h4>North America</h4>
+                    <div class="metric-value">42ms</div>
+                    <div class="latency-bar">
+                        <div class="latency-fill" style="width: 20%;"></div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Europe</h4>
+                    <div class="metric-value">58ms</div>
+                    <div class="latency-bar">
+                        <div class="latency-fill" style="width: 30%;"></div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Asia Pacific</h4>
+                    <div class="metric-value">124ms</div>
+                    <div class="latency-bar">
+                        <div class="latency-fill" style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>South America</h4>
+                    <div class="metric-value">86ms</div>
+                    <div class="latency-bar">
+                        <div class="latency-fill" style="width: 45%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scheduled Maintenance -->
+        <section class="maintenance-section">
+            <div class="section-header">
+                <h2>Scheduled Maintenance</h2>
+                <p>Planned upgrades and infrastructure updates.</p>
+            </div>
+            <div class="maintenance-card">
+                <div class="maintenance-item">
+                    <div>
+                        <strong>Database Schema Migration</strong>
+                        <p style="color: var(--text-muted); font-size: 14px;">January 15, 2026 • 02:00 AM UTC</p>
+                    </div>
+                    <span class="badge" style="background: #e0e7ff; color: var(--primary);">Scheduled</span>
+                </div>
+                <div class="maintenance-item">
+                    <div>
+                        <strong>Security Patch Rollout</strong>
+                        <p style="color: var(--text-muted); font-size: 14px;">Completed January 1, 2026</p>
+                    </div>
+                    <span class="badge" style="background: #ecfdf5; color: #10b981;">Completed</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Uptime History -->
+        <section class="uptime-history">
+            <div class="section-header">
+                <h2>Incident History</h2>
+                <p>Status updates from the last 7 days.</p>
+            </div>
+            <div class="history-card">
+                <div class="history-day">
+                    <span>January 3, 2026</span>
+                    <span style="color: #10b981;">No incidents • 100% Uptime</span>
+                </div>
+                <div class="history-day">
+                    <span>January 2, 2026</span>
+                    <span style="color: #10b981;">No incidents • 100% Uptime</span>
+                </div>
+                <div class="history-day">
+                    <span>January 1, 2026</span>
+                    <span style="color: #10b981;">Infrastructure optimization completed.</span>
+                </div>
+                <div class="history-day">
+                    <span>December 31, 2025</span>
+                    <span style="color: #f59e0b;">Minor latency spike in Asian region (RESOLVED)</span>
+                </div>
+                <div class="history-day">
+                    <span>December 30, 2025</span>
+                    <span style="color: #10b981;">No incidents reported.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Report Issue -->
+        <div class="report-box">
+            <h3>Something not working?</h3>
+            <p style="margin-bottom: 24px; color: var(--text-muted);">If you're experiencing an issue not listed here,
+                please let us know immediately.</p>
+            <a href="mailto:support@saafi.app" class="btn btn-primary">Report an Issue</a>
+        </div>
+
+        <div class="text-center" style="margin-bottom: 120px;">
+            <a href="index.html" class="back-home">← Back to Saafi Home</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                &copy; 2026 Saafi Technologies Inc. | Official Status Center
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

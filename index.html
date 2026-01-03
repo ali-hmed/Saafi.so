@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saafi | Scale Your Virtual Assistant Business</title>
+    <meta name="description"
+        content="The all-in-one platform built for Virtual Assistants. Automate onboarding, manage clients, and scale your income.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Toast Notification -->
+    <div id="notification-toast" class="toast">
+        <div class="toast-content">
+            <i data-lucide="check-circle" class="toast-icon"></i>
+            <span id="toast-message">Sarah just joined the waitlist!</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="main-nav">
+        <div class="container">
+            <a href="#" class="logo">Saa<span>fi</span></a>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#features">Solutions</a></li>
+                <li><a href="#process">The Method</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="help.html">FAQ</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="#login" class="nav-link-item hide-mobile">Login</a>
+                <a href="#cta" class="btn btn-primary nav-btn">Join Now</a>
+                <button class="menu-toggle" id="menu-toggle">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container funnel-layout">
+            <div class="hero-content">
+                <div class="badge-container">
+                    <span class="badge">🔥 45% Increase in Productivity</span>
+                </div>
+                <h1 class="headline">Tired of Managing Clients via <strong>Slack & Email?</strong></h1>
+                <p class="subheadline">Stop the chaos. Saafi is the first automated workspace built specifically for
+                    high-performing Virtual Assistants. Onboard, bill, and manage in one hub.</p>
+
+                <div class="hero-actions">
+                    <div class="email-signup">
+                        <input type="email" placeholder="Enter your work email" id="hero-email">
+                        <button class="btn btn-primary">Get Early Access</button>
+                    </div>
+                </div>
+
+                <div class="social-proof-mini">
+                    <div class="avatar-stack">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=60"
+                            alt="">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=60"
+                            alt="">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=60"
+                            alt="">
+                    </div>
+                    <span>Join <strong>2,400+</strong> VAs already scaling.</span>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="browser-mockup">
+                    <div class="browser-header">
+                        <div class="dots"><span></span><span></span><span></span></div>
+                        <div class="url-bar">saafi.app/dashboard</div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200"
+                        alt="Dashboard Preview">
+                </div>
+                <!-- Floating Elements -->
+                <div class="floating-card revenue bounce-info">
+                    <i data-lucide="trending-up"></i>
+                    <div>
+                        <span>Monthly Revenue</span>
+                        <strong>$8,420.00</strong>
+                    </div>
+                </div>
+                <div class="floating-card clients bounce-info-delay">
+                    <i data-lucide="users"></i>
+                    <div>
+                        <span>Active Clients</span>
+                        <strong>12 <span>+2 this month</span></strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Problems Section (Realism!) -->
+    <section class="problem-section">
+        <div class="container">
+            <p class="section-tagline text-center">The Old Way vs. The Saafi Way</p>
+            <div class="problem-grid">
+                <div class="problem-card old">
+                    <h3>❌ The Chaos</h3>
+                    <ul>
+                        <li><i data-lucide="x-circle"></i> Scattered Google Docs</li>
+                        <li><i data-lucide="x-circle"></i> Chasing invoices manually</li>
+                        <li><i data-lucide="x-circle"></i> Endless unorganized emails</li>
+                        <li><i data-lucide="x-circle"></i> Burnt out and overwhelmed</li>
+                    </ul>
+                </div>
+                <div class="problem-card new">
+                    <h3>✅ The Freedom</h3>
+                    <ul>
+                        <li><i data-lucide="check-circle"></i> Unified Client Portal</li>
+                        <li><i data-lucide="check-circle"></i> Automated Auto-billing</li>
+                        <li><i data-lucide="check-circle"></i> Project Management Hub</li>
+                        <li><i data-lucide="check-circle"></i> Scale while sleeping</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Grid -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Built for Your Growth</h2>
+                <p>Everything you need to run a 6-figure VA business without the 80-hour work week.</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon-box"><i data-lucide="zap"></i></div>
+                    <h3>Automated Onboarding</h3>
+                    <p>Send one link. Client signs the contract, pays the deposit, and uploads files automatically.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box"><i data-lucide="credit-card"></i></div>
+                    <h3>Recurring Billing</h3>
+                    <p>Stop chasing money. Set up retainers and get paid on the 1st of every month automatically.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box"><i data-lucide="layout"></i></div>
+                    <h3>Client Portals</h3>
+                    <p>Give your clients a white-labeled dashboard to see progress, tasks, and files in one spot.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box"><i data-lucide="shield-check"></i></div>
+                    <h3>Security First</h3>
+                    <p>Bank-level encryption for client passwords, sensitive data, and financial records.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The 3-Step Success Loop -->
+    <section id="process" class="process">
+        <div class="container">
+            <div class="section-header">
+                <h2>The 3-Step Success Loop</h2>
+                <p>How our top VAs went from $2k/mo to $10k/mo using Saafi.</p>
+            </div>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-num">01</div>
+                    <h3>Structure</h3>
+                    <p>Map out your services into fixed-price packages using our templates.</p>
+                    <div class="step-connector"></div>
+                </div>
+                <div class="step">
+                    <div class="step-num">02</div>
+                    <h3>Automate</h3>
+                    <p>Enable "Auto-Pilot" mode for onboarding and repetitive reporting.</p>
+                    <div class="step-connector"></div>
+                </div>
+                <div class="step">
+                    <div class="step-num">03</div>
+                    <h3>Scale</h3>
+                    <p>Use your 20+ saved hours a week to acquire high-ticket clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Final CTA -->
+    <section id="cta" class="final-cta">
+        <div class="container">
+            <div class="cta-card">
+                <h2>Join the Future of VA Business</h2>
+                <p>Stop the chaos today. Join 10,000+ professionals scaling their businesses the right way.</p>
+                <div class="cta-btns">
+                    <button class="btn btn-primary btn-large">Claim Your 14-Day Free Trial</button>
+                </div>
+                <p class="cta-note">Used by VAs from 40+ countries.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo">Saa<span>fi</span></div>
+                    <p>Building the infrastructure for the modern assistant economy.</p>
+                    <div class="social-links">
+                        <a href="https://twitter.com" target="_blank"><i data-lucide="twitter"></i></a>
+                        <a href="https://linkedin.com" target="_blank"><i data-lucide="linkedin"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i data-lucide="instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Platform</h4>
+                        <a href="onboarding.html">Onboarding</a>
+                        <a href="billing.html">Billing</a>
+                        <a href="portals.html">Client Portals</a>
+                        <a href="security.html">Security</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Resources</h4>
+                        <a href="pricing.html">Pricing</a>
+                        <a href="academy.html">VA Academy</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="community.html">Community</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Support</h4>
+                        <a href="help.html">Help Center</a>
+                        <a href="mailto:hello@saasify.app">Contact Us</a>
+                        <a href="status.html">Status</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Saafi Technologies Inc. | <a href="terms.html">Terms</a> | <a
+                    href="privacy.html">Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
